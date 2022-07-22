@@ -55,8 +55,8 @@ def main():
                 prob_df.columns=["Emotions","Probabilities"]
                 sl.write(prob_df)
 
-                fig = alt.Chart(prob_df).mark_bar().encode(x='Emotions',y='Probabilities',color='Emotions')
-                sl.altair_chart(fig,use_container_width=True)
+            fig = alt.Chart(prob_df).mark_bar().encode(x='Emotions',y='Probabilities',color='Emotions')
+            sl.altair_chart(fig,use_container_width=True)
 
 if __name__=='__main__':
     main()
